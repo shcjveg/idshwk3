@@ -16,7 +16,7 @@ event http_header(c: connection, is_orig: bool, name: string, value: string){
 
 event zeek_done(){
 	for( address in codeTable){
-		if (|codeTable[address]| >= 2){
+		if (|codeTable[address]| >= 3){
 			print fmt("%s is a proxy", address);
 		}
 	}
